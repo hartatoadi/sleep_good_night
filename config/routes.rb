@@ -9,6 +9,7 @@ Rails.application.routes.draw do
           get :following_sleep_records
         end
       end
+      post '/login', to: 'sessions#create'
     end
   end
 end
