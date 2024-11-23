@@ -2,10 +2,13 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :users, only: [] do
-        resources :sleep_records, only: [:index, :create]
         member do
           post :follow
           delete :unfollow
+        end
+      end
+      resources :sleep_records, only: [:create] do
+        member do
           get :following_sleep_records
         end
       end
