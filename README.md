@@ -26,7 +26,7 @@ The Good Night Application allows users to track their sleep patterns and intera
 
 - **Ruby on Rails** (API-only)
 - **SQLite3** (Database)
-- **Devise** (User authentication)
+- **User authentication**
 - **Jbuilder** (JSON rendering)
 
 ## API Endpoints
@@ -182,6 +182,7 @@ The Good Night Application allows users to track their sleep patterns and intera
 - **Eager Loading:** Optimize database queries to handle large volumes of data efficiently.
 
 ## Future Improvements
+- Improving authentication use Devise, etc.
 - Add user registration and authentication flows.
 - Implement rate limiting to handle high concurrency.
 - Add more detailed analytics for user sleep patterns.
