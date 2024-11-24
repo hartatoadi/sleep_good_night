@@ -7,7 +7,7 @@ Rails.application.routes.draw do
           delete :unfollow
         end
       end
-      resources :sleep_records, only: [ :create, :update ] do
+      resources :sleep_records, only: [ :create, :update, :index ] do
         member do
           get :following_sleep_records
         end

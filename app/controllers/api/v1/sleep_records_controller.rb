@@ -1,5 +1,10 @@
 class Api::V1::SleepRecordsController < ApplicationController
   before_action :find_sleep_record, only: [ :update ]
+
+  def index
+    @my_sleep_records = current_user.sleep_records.order(created_at: :desc)
+  end
+
   def create
     sleep_record = current_user.sleep_records.new
     if sleep_record.save
