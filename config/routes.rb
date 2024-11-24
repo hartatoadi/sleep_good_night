@@ -7,12 +7,12 @@ Rails.application.routes.draw do
           delete :unfollow
         end
       end
-      resources :sleep_records, only: [:create] do
+      resources :sleep_records, only: [ :create, :update ] do
         member do
           get :following_sleep_records
         end
       end
-      post '/login', to: 'sessions#create'
+      post "/login", to: "sessions#create"
     end
   end
 end
