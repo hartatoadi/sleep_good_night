@@ -20,6 +20,9 @@ class User < ApplicationRecord
   private
 
   def generate_auth_token
-    self.auth_token = SecureRandom.hex(20)
+    loop do
+      self.auth_token = SecureRandom.hex(10)
+      break unless User.exists?(auth_token: auth_token)
+    end
   end
 end
