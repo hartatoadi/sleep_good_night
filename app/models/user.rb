@@ -14,7 +14,7 @@ class User < ApplicationRecord
     .joins(:sleep_records)
     .where("sleep_records.created_at >= ?", 1.week.ago)
     .order(duration: :desc)
-    .select("sleep_records.id, sleep_records.user_id, sleep_records.clock_in, sleep_records.clock_out, sleep_records.duration")
+    .select("sleep_records.id, sleep_records.user_id, sleep_records.clock_in, sleep_records.clock_out, sleep_records.duration, users.name AS user_name")
   end
 
   private
