@@ -5,9 +5,9 @@ class ApplicationController < ActionController::API
 
   private
   def authenticate_user!
-    token = request.headers['Authorization']
+    token = request.headers["Authorization"]
     unless token.present? && set_current_user(token)
-      render json: { error: 'Unauthorized' }, status: :unauthorized
+      render json: { error: "Unauthorized" }, status: :unauthorized
     end
   end
 

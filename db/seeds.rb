@@ -12,5 +12,5 @@
 users = User.create([
   { name: "Andy" },
   { name: "Roger" },
-  { name: "Angela" },
+  { name: "Angela" }
 ])
