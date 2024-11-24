@@ -89,7 +89,7 @@ The Good Night Application allows users to track their sleep patterns and intera
     ```
 
 - **Get Sleep Records of Following Users**
-  - `GET /api/v1/sleep_records/:id/following_sleep_records`
+  - `GET /api/v1/following_sleep_records`
   - Response:
     ```json
     {
@@ -99,7 +99,15 @@ The Good Night Application allows users to track their sleep patterns and intera
                 "user_id": 2,
                 "user_name": "Roger",
                 "clock_in": "2024-11-24 03:11:48.123658",
-                "clock_out": "2024-11-24 03:15:30.963216",
+                "clock_out": "2024-11-24 04:33:59.720039",
+                "duration": 1
+            },
+            {
+                "id": 2,
+                "user_id": 2,
+                "user_name": "Roger",
+                "clock_in": "2024-11-24 04:33:34.342925",
+                "clock_out": "2024-11-24 04:35:04.948233",
                 "duration": 0
             }
         ]
