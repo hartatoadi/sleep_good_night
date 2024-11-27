@@ -23,6 +23,6 @@ class SleepRecord < ApplicationRecord
   end
 
   def clock_out_changed?
-    clock_out.present? && saved_change_to_clock_out?
+    clock_out.present? && will_save_change_to_clock_out?
   end
 end
